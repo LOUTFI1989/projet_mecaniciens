@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Liste des Mécaniciens</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Zone</th>
+                <th>Spécialités</th>
+                <th>Adresse</th>
+                <th>Notation</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for mecanicien in mecaniciens %}
+            <tr>
+                <td>{{ mecanicien.id }}</td>
+                <td>{{ mecanicien.nom }}</td>
+                <td>{{ mecanicien.zone }}</td>
+                <td>{{ mecanicien.specialites }}</td>
+                <td>{{ mecanicien.adresse }}</td>
+                <td>{{ mecanicien.notation }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

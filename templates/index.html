@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Bienvenue sur l'application de gestion des mécaniciens</h1>
+    <p><a href="{{ url_for('ajouter_mecanicien') }}">Ajouter un nouveau mécanicien</a></p>
+    <p><a href="{{ url_for('liste_mecaniciens') }}">Voir la liste des mécaniciens</a></p>
+    <p><a href="{{ url_for('chercher_mecaniciens') }}">Rechercher des mécaniciens</a></p>
+    <a href="{{ url_for('register') }}">S'enregistrer</a> <!-- Assurez-vous que l'endpoint 'register' est défini -->
+{% endblock %}
